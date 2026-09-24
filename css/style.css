@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Manrope', sans-serif;
+    height: 200vh;
+    width: 100vw;
+    position: fixed;
+}
+
+:root {
+    --background-colour: white;
+    --nav-color: rgb(37, 6, 56);
+    --pri-card-color: rgb(197, 112, 236);
+    --sec-card-color: rgb(244, 210, 72);
+    --other-card-color: rgb(234, 159, 172);
+}
+
+/* HEADER */
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    height: 50px;
+    width: 97vw;
+    padding: 0px 10px;
+    border-radius: 50px;
+}
+
+.hello {
+    text-align: center;
+}
+
+.hello-text {
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+#date {
+    font-size: 0.9rem;
+}
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+}
+
+.profile-pic img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* HERO SECTION */
+
+.current {
+    height: 20vh;
+    width: 80vw;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: var(--pri-card-color);
+}
+
+.main-card-head{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sub-time{
+    width: 100vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.subject{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.proffesor{
+    margin-top: 3px;
+}
+
+.department{
+    margin-top: 3px;
+}
+
+.next {
+    height: 20vh;
+    width: 80vw;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: var(--sec-card-color);
+}
+
+.today {
+    height: 20vh;
+    width: 80vw;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: var(--other-card-color);
+}
+
+/* NAV BAR */
+
+nav {
+    background-color: var(--nav-color);
+    margin: 10px auto;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    width: 67vw;
+    height: 30px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.home:active {
+    border-bottom: 2px solid white;
+}
