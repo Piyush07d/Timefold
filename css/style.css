@@ -1,13 +1,18 @@
 :root {
     --background-colour: white;
     --nav-color: rgb(37, 6, 56);
-    --pri-card-color: rgb(197, 112, 236);
-    --blue-ink: rgb(94, 28, 125);
-    --sec-card-color: rgb(244, 210, 72);
-    --yellow-ink: rgb(152, 128, 30);
+    --purple-card-color: rgb(211, 138, 245);
+    --purple-ink: rgb(46, 4, 65);
+    --yellow-card-color: rgb(244, 210, 72);
+    --yellow-ink: rgb(51, 41, 3);
+    --pink-card-color: rgb(244, 147, 171);
+    --pink-ink: rgb(78, 12, 28);
     --other-card-color: rgb(234, 159, 172);
     --shadow: 0 2px 16px rgba(0, 0, 0, 0.267);
-    --card-margin: 25px auto 0px auto;
+    --card-margin: 30px 0px 0px 0px;
+    --card-padding: 10px 15px;
+    --card-width: 27.5vw;
+    --border-radius: 18px;
 }
 
 * {
@@ -50,24 +55,24 @@ body {
 
 .main-title {
     font-family: "Edu NSW ACT Cursive", cursive;
-    font-weight: 600;
+    font-weight: 520;
     font-size: 1.8rem;
 }
 
 .profile-pic {
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
-    border: 0.5px solid var(--nav-color);
-    background-color: rgba(130, 60, 174, 0.467);
+    background-color: rgba(37, 6, 56, 0.247);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-#initial{
+#initial {
     font-size: 1.3rem;
+    font-weight: 650;
     color: var(--nav-color);
 }
 
@@ -75,6 +80,14 @@ body {
 
 .hero-section {
     width: 100vw;
+}
+
+.hero-first-div {
+    width: 60vw;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 1px auto;
 }
 
 .greeting {
@@ -92,14 +105,22 @@ body {
     font-size: 1.3rem;
 }
 
+.greet-seperation{
+    height: 1.5px;
+    width: 98%;
+    background-color: var(--nav-color);
+    border-radius: 100px;
+    margin: 20px auto 0px auto;
+}
+
 .current {
     height: 20vh;
-    width: 58vw;
+    width: var(--card-width);
     margin: var(--card-margin);
-    padding: 20px 15px;
-    border-radius: 25px;
-    background-color: var(--pri-card-color);
-    color: var(--blue-ink);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--purple-card-color);
+    color: var(--purple-ink);
     box-shadow: var(--shadow);
 }
 
@@ -107,27 +128,31 @@ body {
 
 .next {
     height: 20vh;
-    width: 80vw;
-    margin-top: 15px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    padding: 15px 20px;
-    border-radius: 25px;
-    background-color: var(--sec-card-color);
-    color: var(--yellow-ink);
+    width: var(--card-width);
+    margin: var(--card-margin);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--pink-card-color);
+    color: var(--pink-ink);
     box-shadow: var(--shadow);
 }
 
 .today {
-    height: 50vh;
-    width: 80vw;
-    margin-top: 15px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    padding: 15px 20px;
-    border-radius: 25px;
-    background-color: var(--other-card-color);
+    width: 58vw;
+    margin: 13px auto 0px auto;
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--yellow-card-color);
+    color: var(--yellow-ink);
     box-shadow: var(--shadow);
+}
+
+.card-description {
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px 0px 0px;
+    margin: 5px 0;
 }
 
 /* NAV BAR */
