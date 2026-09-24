@@ -1,3 +1,15 @@
+:root {
+    --background-colour: white;
+    --nav-color: rgb(37, 6, 56);
+    --pri-card-color: rgb(197, 112, 236);
+    --blue-ink: rgb(94, 28, 125);
+    --sec-card-color: rgb(244, 210, 72);
+    --yellow-ink: rgb(152, 128, 30);
+    --other-card-color: rgb(234, 159, 172);
+    --shadow: 0 2px 16px rgba(0, 0, 0, 0.267);
+    --card-margin: 25px auto 0px auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +19,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: 'Manrope', sans-serif;
-    height: 200vh;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     width: 100vw;
-    position: fixed;
+    margin-top: 16vh;
 }
 
-:root {
-    --background-colour: white;
-    --nav-color: rgb(37, 6, 56);
-    --pri-card-color: rgb(197, 112, 236);
-    --sec-card-color: rgb(244, 210, 72);
-    --other-card-color: rgb(234, 159, 172);
-}
 
 /* HEADER */
 
@@ -29,98 +33,101 @@ body {
     align-items: center;
     margin: 10px auto;
     height: 50px;
-    width: 97vw;
+    width: 60vw;
     padding: 0px 10px;
     border-radius: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
 }
 
-.hello {
+.title {
     text-align: center;
 }
 
-.hello-text {
-    font-weight: 900;
-    font-size: 1.1rem;
-}
-
-#date {
-    font-size: 0.9rem;
+.main-title {
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-weight: 600;
+    font-size: 1.8rem;
 }
 
 .profile-pic {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    border: 0.5px solid black;
+    border: 0.5px solid var(--nav-color);
+    background-color: rgba(130, 60, 174, 0.467);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.profile-pic img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+#initial{
+    font-size: 1.3rem;
+    color: var(--nav-color);
 }
 
 /* HERO SECTION */
 
+.hero-section {
+    width: 100vw;
+}
+
+.greeting {
+    width: 59vw;
+    margin: 0px auto 0px auto;
+    border-radius: 25px;
+}
+
+.greeting-text {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#date {
+    font-size: 1.3rem;
+}
+
 .current {
     height: 20vh;
-    width: 80vw;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px 20px;
+    width: 58vw;
+    margin: var(--card-margin);
+    padding: 20px 15px;
     border-radius: 25px;
     background-color: var(--pri-card-color);
-}
-
-.main-card-head{
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
+    color: var(--blue-ink);
+    box-shadow: var(--shadow);
 }
 
 
-.sub-time{
-    width: 100vw;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.subject{
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.proffesor{
-    margin-top: 3px;
-}
-
-.department{
-    margin-top: 3px;
-}
 
 .next {
     height: 20vh;
     width: 80vw;
     margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     padding: 15px 20px;
     border-radius: 25px;
     background-color: var(--sec-card-color);
+    color: var(--yellow-ink);
+    box-shadow: var(--shadow);
 }
 
 .today {
-    height: 20vh;
+    height: 50vh;
     width: 80vw;
     margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     padding: 15px 20px;
     border-radius: 25px;
     background-color: var(--other-card-color);
+    box-shadow: var(--shadow);
 }
 
 /* NAV BAR */
@@ -133,9 +140,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    width: 67vw;
+    width: 52vw;
     height: 30px;
     color: white;
+    box-shadow: var(--shadow);
     position: fixed;
     bottom: 0;
     left: 0;

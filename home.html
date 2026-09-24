@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daybook</title>
+    <title>TimeFold</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans+Balinese:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,26 +28,14 @@
             <div class="main-head">
 
                 <div class="profile-pic">
-                    <img src="assests/img/profile.jpg">
+                    <div id="initial"></div>
                 </div>
 
-                <div class="hello">
-                    <p class="hello-text">
-                        Hello, Piyush
+                <div class="title">
+                    <p class="main-title">
+                        TimeFold
                     </p>
-                    <p class="sub-text">
-                    <p id="date"></p>
 
-                    <script>
-
-                        const date = new Date();
-
-                        const day = date.getDate();
-                        const month = date.toLocaleString('en-US', { month: 'short' });
-
-                        document.getElementById("date").textContent = `Today, ${day} ${month}`;
-                    </script>
-                    </p>
                 </div>
 
                 <div class="notification">
@@ -57,45 +51,64 @@
 
         <section>
             <div class="hero-section">
+                <div class="greeting">
+                    <p class="greeting-text" id="greeting">
+                        Hello, Piyush
+                    </p>
+
+                    <script>
+                        const greeting = document.getElementById("greeting").textContent;
+
+                        const name = greeting.split(",")[1].trim();
+
+                        document.getElementById("initial").textContent = name.charAt(0).toUpperCase();
+                    </script>
+
+                    <p id="date"></p>
+
+                    <script>
+
+                        const date = new Date();
+
+                        const day = date.getDate();
+                        const month = date.toLocaleString('en-US', { month: 'short' });
+
+                        document.getElementById("date").textContent = `Today, ${day} ${month}`;
+                    </script>
+
+                </div>
+
                 <div class="current">
-                    
-                    <h1>
+
+                    <h2>
                         Current Class
-                    </h1>
-                    
+                    </h2>
+
                     <div class="sub-time">
-                        <p class="subject">
+                        <div>
                             DBMS
-                        </p>
-                        <p class="subject">
-                            10:30 - 11:30
-                        <p>
+                        </div>
+
+                        <div>
+                            10:30 - 12:30
+                        </div>
                     </div>
 
                     <div class="proffesor">
-                        <p class="proff-name">
-                            Rijit Singh
-                        </p>
+
                     </div>
 
                     <div class="department">
-                        <p class="dept">
-                            Computer Department
-                        <p>
+
                     </div>
                 </div>
 
-                <div class="next">
+                <!-- <div class="next">
                     <h3>
                         Next Class
                     </h3>
-                </div>
+                </div> -->
 
-                <div class="today">
-                    <h3>
-                        Today
-                    </h3>
-                </div>
             </div>
         </section>
 
