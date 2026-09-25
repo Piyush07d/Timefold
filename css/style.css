@@ -24,8 +24,6 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     margin-top: 13vh;
