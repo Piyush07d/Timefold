@@ -124,11 +124,16 @@
             border: none;
             transition: all 0.15s ease-in-out;
         }
-        
-        button:hover{
+
+        button:hover {
             cursor: pointer;
             background-color: var(--nav-color);
             color: var(--nav-ink);
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
         }
     </style>
 
@@ -144,7 +149,7 @@
                 <div class="title-sub-div">
                     <p>TimeFold</p>
                 </div>
-                    <img src="assests/img/studying.png">
+                <img src="assests/img/studying.png">
             </div>
             <div class="register-div">
                 <h1 style="color: var(--purple-ink);">Register</h1>
@@ -180,8 +185,7 @@
 
                         <div id="passwordMessage"> Password Must Be Same </div>
 
-                        <button
-                            style="width: 27.5vw; border-radius: 50px; padding: 0px 10px; height: 7vh;"
+                        <button style="width: 27.5vw; border-radius: 50px; padding: 0px 10px; height: 7vh;"
                             type="button" onclick="register()">Create Account</button>
                     </form>
                 </div>

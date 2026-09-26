@@ -82,6 +82,7 @@
             align-items: center;
             justify-content: center;
             height: fit-content;
+            box-shadow: var(--shadow);
         }
 
         .form-content {
@@ -102,6 +103,7 @@
             border: 0.5px white;
             width: 26vw;
             border-radius: 50px;
+            box-shadow: var(--shadow);
         }
 
         input:focus {
@@ -125,9 +127,9 @@
 
         button {
             background-color: var(--yellow-card-color);
+            box-shadow: var(--shadow);
             color: var(--yellow-ink);
             font-size: 1.5rem;
-            box-shadow: none;
             border: none;
             transition: all 0.15s ease-in-out;
         }
@@ -136,6 +138,11 @@
             cursor: pointer;
             background-color: var(--nav-color);
             color: var(--nav-ink);
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
         }
     </style>
 
@@ -163,18 +170,15 @@
                             style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
                             <div class="input-div">
-                                <input type="text" id="enroll"
-                                    placeholder="Enrollment Number" required>
+                                <input type="text" id="enroll" placeholder="Enrollment Number" required>
                             </div>
 
                             <div class="input-div">
-                                <input type="password" id="password"
-                                    placeholder="Password" required>
+                                <input type="password" id="password" placeholder="Password" required>
                             </div>
 
                             <div class="input-div">
-                                <input type="text" id="batch"
-                                    placeholder="Batch" required>
+                                <input type="text" id="batch" placeholder="Batch" required>
                             </div>
 
                         </div>

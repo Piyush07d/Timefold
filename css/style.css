@@ -259,7 +259,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    width: 52vw;
+    width: 40vw;
     height: 30px;
     box-shadow: var(--shadow);
     position: fixed;
@@ -280,14 +280,25 @@ nav {
 
 .nav-button {
     background-color: transparent;
-    height: 4.5vh;
-    width: 2.1vw;
+    height: 5.5vh;
+    width: 2.5vw;
     box-shadow: none;
     border: none;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-button:hover{
+    cursor: pointer;
 }
 
 .current-page {
-    background-color: rgba(192, 95, 249, 0.204);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(125, 89, 146, 0.204);
 }
 
 
@@ -296,3 +307,22 @@ nav {
                                                 MAP PAGE
 ------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------ */
+
+.map-box{
+    height: 60vh;
+    width: 45vw;
+    margin: 0px auto 10px auto;
+    border: 1px solid grey;
+    border-radius: var(--border-radius);
+}
+
+.map-chr{
+    display: flex;
+    justify-content: space-between;
+    width: 45vw;
+    margin: 0px auto 0px auto;
+}
+
+.map-chr img{
+    margin: 0px 1.5vw;
+}
