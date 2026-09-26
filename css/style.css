@@ -15,7 +15,7 @@
     --card-padding: 10px 15px;
     --card-width: 27.5vw;
     --border-radius: 18px;
-    --small-divs-border-radius: 10px ;
+    --small-divs-border-radius: 10px;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
     width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -79,7 +79,8 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.267);;
+    box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.267);
+    ;
 }
 
 #initial {
@@ -114,7 +115,7 @@ a{
 
 /* HR */
 
-.greet-seperation{
+.greet-seperation {
     height: 0.45px;
     width: 100%;
     background-color: var(--nav-color);
@@ -158,18 +159,18 @@ a{
 
 /* Styling of the content which are inside the cards */
 
-.card-sub-div{
+.card-sub-div {
     display: flex;
     justify-content: space-between;
 
 }
 
-.bold-text{
+.bold-text {
     font-size: 1.2em;
     font-weight: 700;
 }
 
-.small-text{
+.small-text {
     font-size: 0.9em;
     font-weight: 580;
 
@@ -183,7 +184,7 @@ a{
     align-items: baseline;
 }
 
-.location-des{
+.location-des {
     font-size: 0.8em;
     font-weight: 600;
     margin: 15px 0px 0px 0px;
@@ -193,7 +194,7 @@ a{
     gap: 5px;
 }
 
-.location-des-today-card{
+.location-des-today-card {
     font-size: 0.8em;
     font-weight: 600;
     display: flex;
@@ -202,7 +203,7 @@ a{
     gap: 5px;
 }
 
-.card-right-section img{
+.card-right-section img {
     height: 25vh;
     position: relative;
     bottom: 60px;
@@ -211,20 +212,20 @@ a{
 
 /* Styling of the content inside the Today Card */
 
-#currentDay{
+#currentDay {
     margin: 0px 5px;
     font-weight: 500;
     font-size: 1.1em;
 }
 
-.lectures{
+.lectures {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 10px auto;
 }
 
-.lecture-div{
+.lecture-div {
     display: flex;
     justify-content: space-between;
     background-color: var(--yellow-card-content-color);
@@ -234,13 +235,13 @@ a{
     width: inherit;
 }
 
-.lecture-div > div{
+.lecture-div>div {
     display: flex;
     flex-direction: column;
     align-items: baseline;
 }
 
-.lecture-div > :last-child{
+.lecture-div> :last-child {
     align-items: center;
     justify-content: center;
     font-size: 1.1em;
@@ -260,7 +261,6 @@ nav {
     padding: 10px 50px;
     width: 52vw;
     height: 30px;
-    color: white;
     box-shadow: var(--shadow);
     position: fixed;
     bottom: 0;
@@ -269,10 +269,27 @@ nav {
     z-index: 1000;
 }
 
-.nav-button{
+.nav-button-div {
+    height: 5.5vh;
+    width: 2.5vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button {
     background-color: transparent;
+    height: 4.5vh;
+    width: 2.1vw;
+    box-shadow: none;
     border: none;
 }
+
+.current-page {
+    background-color: rgba(192, 95, 249, 0.204);
+}
+
 
 /* ---------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------
