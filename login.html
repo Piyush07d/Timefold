@@ -16,106 +16,251 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans+Balinese:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap"
         rel="stylesheet">
-    <style>
-        * {
 
+    <style>
+        :root {
+            --background-colour: white;
+            --nav-color: rgb(47, 20, 64);
+            --nav-ink: rgb(190, 135, 225);
+            --purple-card-color: rgb(211, 138, 245);
+            --purple-ink: rgb(69, 13, 95);
+            --yellow-card-color: rgb(244, 210, 72);
+            --yellow-ink: rgb(93, 78, 18);
+            --pink-card-color: rgb(244, 147, 171);
+            --pink-ink: rgb(104, 22, 43);
+            --shadow: 0 2px 16px rgba(0, 0, 0, 0.267);
+            --border-radius: 18px;
+        }
+
+        * {
+            margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            min-height: 100vh;
+            justify-content: space-between;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(169, 21, 21);
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: underline;
+            align-items: center;
+            width: 15vw;
+            color: var(--purple-ink);
+        }
+
+        .main-div {
+            width: fit-content;
+            margin: 0px auto;
+        }
+
+        .main-div img {
+            height: 25vh;
+            margin: 5px auto 0px auto;
+        }
+
+        .login-title {
             display: flex;
+            font-family: "Edu NSW ACT Cursive", cursive;
+            font-size: 3em;
+            align-items: center;
+            justify-content: baseline;
+            font-weight: 500;
+            width: fit-content;
+            margin: 10vh auto 0px auto;
+        }
+
+        .login-div {
+            background-color: var(--purple-card-color);
+            padding: 20px 30px;
+            width: fit-content;
+            border-radius: var(--border-radius);
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+        }
+
+        .form-content {
+            width: fit-content;
+            margin: 15px auto;
+        }
+
+        .input-div {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px auto 0px auto;
+        }
+
+        input {
+            font-size: 1em;
+            padding: 0px 10px;
+            height: 8vh;
+            border: 0.5px white;
+            width: 26vw;
+            border-radius: 50px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: inherit;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+        .reg-link {
+            margin: 10px 15px 0px 15px;
             justify-content: center;
             align-items: center;
-
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-
-            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--purple-ink);
         }
 
 
-        .login {
-            width: 350px;
-            padding: 40px;
-
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-
-            text-align: center;
+        button {
+            background-color: var(--yellow-card-color);
+            color: var(--yellow-ink);
+            font-size: 1.5rem;
+            box-shadow: none;
+            border: none;
+            transition: all 0.15s ease-in-out;
         }
 
-
-        .login.h1 {
-            color: white;
-            margin-bottom: 30px;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-
-
-        .login input {
-            width: 100%;
-            padding: 14px 16px;
-            margin-bottom: 18px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 10px;
-            outline: none;
-            font-size: 15px;
-            transition: 0.3s;
+        button:hover {
+            cursor: pointer;
+            background-color: var(--nav-color);
+            color: var(--nav-ink);
         }
     </style>
+
+
 </head>
 
 <body>
-    <div class="login">
-        <h1>Login</h1>
-        <input id="enroll" placeholder="Enrollment Number">
-        <input id="password" type="password" placeholder="Password">
-        <input id="confirm-password" type="text" placeholder="batch">
+
+    <main>
+
+        <div class="main-div">
+            <div class="login-title">
+                <div class="title-sub-div">
+                    <p>TimeFold</p>
+                </div>
+                <img src="assests/img/studying.png">
+            </div>
+            <div class="login-div">
+                <h1 style="color: var(--purple-ink);">Log In</h1>
+                <div class="form-content">
+                    <form id="registration-form">
 
 
-        <button onclick="login()">Login</button>
-        <a href="register.html">For New Registration Click here</a>
+                        <div
+                            style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
-    </div>
+                            <div class="input-div">
+                                <input type="text" id="enroll"
+                                    placeholder="Enrollment Number" required>
+                            </div>
+
+                            <div class="input-div">
+                                <input type="password" id="password"
+                                    placeholder="Password" required>
+                            </div>
+
+                            <div class="input-div">
+                                <input type="text" id="batch"
+                                    placeholder="Batch" required>
+                            </div>
+
+                        </div>
+
+                        <div class="reg-link">
+                            Haven't Register Yet? <a href="register.html">Register here</a>
+                        </div>
+                        <br>
+
+                        <button style="width: 27.5vw; border-radius: 50px; padding: 0px 10px; height: 7vh;"
+                            type="button" onclick="login()">Log In</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 <script>
-    async function login() {
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm_password");
+    const passwordMessage = document.getElementById("passwordMessage");
 
-
-        const enroll = await document.getElementById('enroll').value;
-        const password = await document.getElementById('password').value;
-        const batch = await document.getElementById('confirm-password').value;
-        if (!enroll || !password || !batch) {
-            alert('Please enter all fields.');
+    function checkPassword() {
+        if (confirmPassword.value === "") {
+            passwordMessage.textContent = "";
             return;
         }
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ enroll, password, batch })
-        });
-       
-        const data = await response.json();
 
+        if (password.value !== confirmPassword.value) {
+            passwordMessage.textContent = "Passwords do not match";
+            passwordMessage.style.color = "red";
+        } else {
+            passwordMessage.textContent = "Password is Same";
+            passwordMessage.style.color = "rgb(69, 13, 95)";
+        }
+    }
+
+
+    confirmPassword.addEventListener("input", checkPassword);
+
+    async function register() {
+
+        const name = await document.getElementById('name').value;
+        const enroll = await document.getElementById('enroll').value;
+        const password = await document.getElementById('password').value;
+        const confirm_password = await document.getElementById('confirm_password').value;
+        const batch = await document.getElementById('batch').value;
+
+        if (!name || !enroll || !password || !batch) {
+            alert('Please enter all details');
+            return;
+        }
+        if (password !== confirm_password) {
+            alert('Passwords do not match');
+            return;
+        }
+
+        const response = await fetch("/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                enroll,
+                password,
+                batch
+            })
+        });
+        console.log(name, enroll, password, batch);
+
+
+        const data = await response.json();
         if (response.ok) {
-            alert(data.message);
-            window.location.href = "/home.html";
+            alert(data.message)
+            window.location.href = "./index.html"
+
         } else {
             alert(data.message);
         }
+
     }
+
+
 </script>
+
 </html>
